@@ -74,7 +74,7 @@ def _build_parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--chunk-overlap",
         type=int,
-        default=80,
+        default=150,
         metavar="N",
         help="Characters of context carried from each chunk into the next.",
     )

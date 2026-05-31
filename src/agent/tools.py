@@ -88,7 +88,7 @@ def decide_route(question: str) -> tuple[str, str | list[str] | None]:
 def search_kb(
     retriever: Retriever,
     query: str,
-    k: int = 5,
+    k: int | None = None,
     doc_type: str | list[str] | None = None,
 ) -> list[dict[str, Any]]:
     """
@@ -97,13 +97,17 @@ def search_kb(
     Args:
         retriever: Shared Retriever instance (model + ChromaDB already loaded).
         query: Natural-language search string.
-        k: Max number of chunks to retrieve.
+        k: Max number of chunks to retrieve. Defaults to 8 for cv queries
+           (CV bullet points are small and spread across many chunks) and
+           5 for everything else.
         doc_type: Optional metadata filter (e.g. ``"cv"``, ``"transcript"``,
                   or a list of accepted types).  ``None`` = no filter.
 
     Returns:
         List of chunk dicts, sorted by descending cosine similarity.
     """
+    if k is None:
+        k = 8 if doc_type == "cv" else 5
     results = retriever.query(query, k=k, doc_type=doc_type)
     chunks = [_to_dict(r) for r in results]
     logger.debug("search_kb: query=%r doc_type=%r → %d chunks", query[:50], doc_type, len(chunks))
