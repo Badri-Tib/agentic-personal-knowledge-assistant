@@ -10,8 +10,6 @@ A local RAG agent that answers questions about your personal documents — résu
 
 ![demo placeholder](assets/demo.gif)
 
-> *Screenshot / GIF to be added after recording a session.*
-
 ---
 
 ## How it works
