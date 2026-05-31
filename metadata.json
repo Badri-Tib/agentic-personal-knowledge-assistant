@@ -1,0 +1,28 @@
+{
+  "last_updated": "2026-05-31T18:55:55.703025+00:00",
+  "num_docs": 3,
+  "num_chunks": 12,
+  "indexed_files": [
+    {
+      "filename": "cv_subaru_natsuki.pdf",
+      "source_file": "data\\examples\\cv_subaru_natsuki.pdf",
+      "doc_type": "cv",
+      "num_chunks": 7,
+      "ingested_at": "2026-05-31T18:55:55.703025+00:00"
+    },
+    {
+      "filename": "releve_notes_m1.pdf",
+      "source_file": "data\\examples\\releve_notes_m1.pdf",
+      "doc_type": "transcript",
+      "num_chunks": 3,
+      "ingested_at": "2026-05-31T18:55:55.703025+00:00"
+    },
+    {
+      "filename": "titre_sejour_exemple.pdf",
+      "source_file": "data\\examples\\titre_sejour_exemple.pdf",
+      "doc_type": "titre_sejour",
+      "num_chunks": 2,
+      "ingested_at": "2026-05-31T18:55:55.703025+00:00"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+# ── Parsing ──────────────────────────────────────────────────────────────────
+pymupdf>=1.24.0          # native PDF text + scanned PDF rendering
+pytesseract>=0.3.10      # OCR wrapper (requires Tesseract binary)
+Pillow>=10.0.0
+
+# ── Embeddings ────────────────────────────────────────────────────────────────
+# PyTorch: install the CUDA-enabled wheel separately if you have a GPU, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu118
+torch>=2.0.0
+sentence-transformers>=3.0.0
+
+# ── Vector store ─────────────────────────────────────────────────────────────
+chromadb>=0.5.0
+
+# ── LLM ──────────────────────────────────────────────────────────────────────
+groq>=0.9.0
+
+# ── Agent ─────────────────────────────────────────────────────────────────────
+langgraph>=0.2.0
+langchain-core>=0.3.0
+
+# ── Interface ─────────────────────────────────────────────────────────────────
+streamlit>=1.36.0
+
+# ── Evaluation ───────────────────────────────────────────────────────────────
+ragas>=0.1.0
+
+# ── Utils ─────────────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
